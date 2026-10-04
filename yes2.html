@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>unakuanga mslow mbaya</title>
+<style>
+  :root {
+    --amber: #f6b21b;
+    --ink: #0c0c0e;
+    --card: rgba(14, 14, 17, 0.86);
+    --line: rgba(255, 255, 255, 0.12);
+    --muted: #9ca3af;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body { height: 100%; }
+
+  body {
+    font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+    background: var(--ink) url("assets/mamba-bg.png") center / cover no-repeat fixed;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 5, 8, 0.55);
+    pointer-events: none;
+  }
+
+  .card {
+    position: relative;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 52px 44px;
+    max-width: 640px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  }
+
+  h1 {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-weight: 600;
+    font-size: clamp(40px, 7vw, 68px);
+    line-height: 1.1;
+  }
+
+  h1 em { color: var(--amber); font-style: italic; }
+
+  .media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .media video {
+    width: 108px;
+    flex: none;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    background: #000;
+  }
+
+  .media figcaption {
+    max-width: 260px;
+    text-align: left;
+    font-size: 19px;
+    line-height: 1.35;
+    font-weight: 600;
+    font-style: italic;
+    color: #e5e7eb;
+  }
+
+  .back {
+    display: inline-block;
+    margin-top: 28px;
+    background: var(--amber);
+    color: #141414;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 13px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+
+  .back:hover { background: #ffc63f; }
+</style>
+</head>
+<body>
+<section class="card">
+  <figure class="media">
+    <video src="pointing-screen.mp4" autoplay muted loop playsinline preload="metadata"></video>
+    <figcaption>tutakutibuu weeh mzee tokaa apaaa!!!</figcaption>
+  </figure>
+  <h1>unakuanga <em>mslow mbaya.</em></h1>
+  <a class="back" href="check.html?retry=1">Go back and pick the right answer</a>
+</section>
+</body>
+</html>
